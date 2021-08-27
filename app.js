@@ -9,7 +9,7 @@ const flash = require('connect-flash');
 
 //import koneksi
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/db_staycation', {
+mongoose.connect('mongodb+srv://adin:mern@cluster0.zaemo.mongodb.net/db_staycation?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
