@@ -5,29 +5,29 @@
 
     <%- include('../../partials/sidebar.ejs') %>
 
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
 
-      <!-- Main Content -->
-      <div id="content">
-        <%- include('../../partials/navbar.ejs') %>
+        <!-- Main Content -->
+        <div id="content">
+          <%- include('../../partials/navbar.ejs') %>
 
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
-          <%- include('../../partials/message.ejs') %>
-          <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Category</h1>
-            <%- include('table_category.ejs') %>
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+              <%- include('../../partials/message.ejs') %>
+                <!-- Page Heading -->
+                <h1 class="h3 mb-4 text-gray-800">Category</h1>
+                <%- include('table_category.ejs') %>
+            </div>
+            <!-- /.container-fluid -->
+
         </div>
-        <!-- /.container-fluid -->
+        <!-- End of Main Content -->
+
+        <%- include('../../partials/footer.ejs') %>
 
       </div>
-      <!-- End of Main Content -->
-
-      <%- include('../../partials/footer.ejs') %>
-
-    </div>
-    <!-- End of Content Wrapper -->
+      <!-- End of Content Wrapper -->
 
   </div>
   <!-- End of Page Wrapper -->
@@ -38,7 +38,8 @@
   </a>
 
   <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -56,19 +57,19 @@
     </div>
   </div>
   <%- include('add_modal.ejs') %>
-  <%- include('edit_modal.ejs') %>
-  <%- include('../../partials/js.ejs') %>
+    <%- include('edit_modal.ejs') %>
+      <%- include('../../partials/js.ejs') %>
 
-  <script>
-    $('#dataTable').on('click', '.button-update', function(){
-      let id = $(this).data('id');
-      let name = $(this).data('name');
-      console.log(id + name);
-      $('#edit-modal').modal('show');
-      $('.id').val(id);
-      $('.name').val(name);
-    })
-  </script>
-</body>
+        <script>
+          $('#dataTable').on('click', '.button-update', function () {
+            let id = $(this).data('id');
+            let name = $(this).data('name');
+            console.log(id + name);
+            $('#edit-modal').modal('show');
+            $('.id').val(id);
+            $('.name').val(name);
+          })
+        </script>
+        </body>
 
-</html>
+        </html>

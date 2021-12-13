@@ -10,7 +10,7 @@ const cors = require('cors')
 
 //import koneksi
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://adin:mern@cluster0.zaemo.mongodb.net/db_staycation?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://adin:URbSSgt3OPiVOm0I@cluster0.zaemo.mongodb.net/db_staycation?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
@@ -50,12 +50,12 @@ app.use('/admin', adminRouter);
 app.use('/api/v1/member', apiRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
